@@ -21,4 +21,4 @@ https://www.youtube.com/watch?v=b2iWK08pCgs
  # Ou seja as pasta page gera as rotas
  EX:. URL  localhost:3000/pageName/fileName 
 
- # Acessando ficheiro da pasta  componentes
+ # Acessando ficheiro da pasta  components
