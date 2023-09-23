@@ -22,3 +22,16 @@ https://www.youtube.com/watch?v=b2iWK08pCgs
  EX:. URL  localhost:3000/pageName/fileName 
 
  # Acessando ficheiro da pasta  components
+
+ 1º criar pasta ex:. components/pasta/File.tsx
+ 
+ para invocar ou acessar componente na pasta page ex:. page/pasta/file.tsx
+ basta importar o ficheiro da pasta components/pasta/File.tsx 
+ ex: import File from "@/components/pasta/File"; 
+
+ basta criar uma taag com nome do ficheiro do componente no ficheiro da pagina em que pretendes chamar a componente
+ ex. <File />
+
+ NOTA:. Por convenção os ficheiros dos componentes são sempre escrito com a primeira letra maiuscúla 
+        para diferencia-lôs dos ficheiros das páginas 
+
