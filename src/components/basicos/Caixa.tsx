@@ -1,4 +1,4 @@
-export default function Caixa() {
+export default function Caixa(pros:any) {
 
     return (
         <div className={ `
@@ -8,7 +8,8 @@ export default function Caixa() {
            font-bold 
            text-pink-100
         `}>
-            Segundo Componente Caixa
+            {/* Segundo Componente Caixa */}
+            {pros.children}
         </div>
     )
 

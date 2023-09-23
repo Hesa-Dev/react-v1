@@ -17,7 +17,17 @@ meu-projeto-react/
 Bibliografia 
 https://www.youtube.com/watch?v=b2iWK08pCgs
 
- # Para acessar as paginas da pasta page no browser  basta inserir o  camainho ocultando a extensão do ficheiro 
+ # Aspectos abordados deste curso
+
+ 1[next] pasta page gera as rotas | ou seja transforma os ficheiros em url 
+ 2 [React] primeiro componentes
+ 3 [React]  componentes usando props.children
+ 4 [React]  componentes usando props.children
+ 5 [React]  componentes usando props.children
+
+
+
+ # Para acessar as paginas da pasta page no browser  basta inserir o  caminho ocultando a extensão do ficheiro 
  # Ou seja as pasta page gera as rotas
  EX:. URL  localhost:3000/pageName/fileName 
 
@@ -34,4 +44,7 @@ https://www.youtube.com/watch?v=b2iWK08pCgs
 
  NOTA:. Por convenção os ficheiros dos componentes são sempre escrito com a primeira letra maiuscúla 
         para diferencia-lôs dos ficheiros das páginas 
+
+
+     
 
