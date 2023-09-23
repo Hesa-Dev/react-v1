@@ -3,6 +3,7 @@
 // validação do tipo de parâmetro da função 
 interface CirculoProps{
     texto:string;
+    quasePerfeito?:boolean; // ? ->significa parâmetro opcional 
 }
 
 export default function Circulo(pros:CirculoProps) {
@@ -20,6 +21,7 @@ export default function Circulo(pros:CirculoProps) {
         items-center
         font-black
         text-3xl
+        ${pros.quasePerfeito ? 'rounded-2xl' : 'rounded-full'}
         ` }>
             {pros.texto}
         </div>

@@ -17,13 +17,18 @@ meu-projeto-react/
 Bibliografia 
 https://www.youtube.com/watch?v=b2iWK08pCgs
 
- # Aspectos abordados deste curso
+ # Aspectos abordados neste curso
 
  1[next] pasta page gera as rotas | ou seja transforma os ficheiros em url 
  2 [React] primeiro componentes
  3 [React]  componentes usando props.children
- 4 [React]  componentes usando props.children
- 5 [React]  componentes usando props.children
+ 4 [React]  componentes usando props
+ 5 [React]  componentes com eventos 
+ 6 [React]  componentes com estados
+ 7 [React]  comunicação entre componentes (direita)
+ 8 [React]  comunicação entre componentes (indireita)
+ 9 [React]  renderização condicional 
+ 8 [React]  renderização de lista  
 
 
 

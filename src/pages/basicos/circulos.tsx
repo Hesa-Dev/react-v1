@@ -13,6 +13,7 @@ export default function PaginaCirculos() {
             <Circulo texto="circ. #1" />
             <Circulo texto="circ. #2" />
             <Circulo texto="circ. #3" />
+            <Circulo texto="circ. #4"  quasePerfeito={false}/>
         </div>
     )
 }
