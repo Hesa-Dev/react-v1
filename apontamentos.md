@@ -13,6 +13,53 @@ meu-projeto-react/
   ├── yarn.lock               // Versões exatas das dependências (yarn)
   ├── README.md               // Documentação do projeto
  
+ # HOOK 
+
+ O termo "hook" em React refere-se a uma característica introduzida no React 16.8 que permite que você use o estado (state) e outros recursos do React em componentes funcionais. Antes dos hooks, as funcionalidades de estado e ciclo de vida estavam disponíveis apenas em componentes de classe.
+
+Os hooks são funções especiais que permitem que você "conecte" o estado e o ciclo de vida do React a componentes funcionais, sem a necessidade de converter esses componentes em classes. Eles foram projetados para tornar o código mais legível e reutilizável em componentes funcionais, que são mais simples e concisos do que componentes de classe.
+
+Alguns dos hooks mais comuns incluem:
+
+1. useState: Permite que você adicione estado local a um componente funcional.
+
+import React, { useState } from 'react';
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Você clicou {count} vezes</p>
+      <button onClick={() => setCount(count + 1)}>Clique aqui</button>
+    </div>
+  );
+}
+
+
+2. useEffect: Permite que você realize efeitos colaterais em componentes funcionais, como solicitações de rede, atualizações de título da página, etc.
+
+import React, { useState, useEffect } from 'react';
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    document.title = `Você clicou ${count} vezes`;
+  });
+
+  return (
+    <div>
+      <p>Você clicou {count} vezes</p>
+      <button onClick={() => setCount(count + 1)}>Clique aqui</button>
+    </div>
+  );
+}
+
+
+Existem muitos outros hooks disponíveis, como useContext, useReducer, useRef, etc. Eles permitem que você gerencie o estado, os efeitos colaterais e outros aspectos do ciclo de vida em componentes funcionais de forma mais eficaz.
+
+Os hooks tornaram o desenvolvimento em React mais intuitivo e funcional, eliminando a necessidade de classes em muitos casos e promovendo o reuso de lógica em componentes funcionais. Eles se tornaram uma parte fundamental da biblioteca React.
 
 Bibliografia 
 https://www.youtube.com/watch?v=b2iWK08pCgs
