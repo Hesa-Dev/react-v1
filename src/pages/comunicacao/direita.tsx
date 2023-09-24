@@ -5,8 +5,8 @@ export default function PaginaDireita(){
  return (
 
     <div className="flex justify-center flex-col items-center h-screen">
-        <h1 className="text-5xl mb-10"> comunicação direita</h1>
-        <Avo />
+        <h1 className="text-5xl mb-10 bg-slate-400"> comunicação direita</h1>
+        <Avo nome="Jose" sobrenome="Pedro" />
     </div>
  )
 
