@@ -26,7 +26,7 @@ export default function ImagemAleatoria() {
             `} onClick={() => {
 
                     alterarPesquisa(valor)
-                    console.log(urlImagem())
+                    // console.log(urlImagem())
                 }}>
                 {valor}
             </button>

@@ -18,7 +18,6 @@ return (
     text-4xl 
     ` }   
     onClick={incrementar}>
-       
         Evento
     </button>
 )

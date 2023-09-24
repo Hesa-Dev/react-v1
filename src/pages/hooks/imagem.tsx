@@ -13,6 +13,7 @@ export default function PaginaImagens() {
             <ImagemAleatoria/>
             <ImagemAleatoria/>
         </div>
+        
     )
 
 }
