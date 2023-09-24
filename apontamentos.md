@@ -72,6 +72,11 @@ https://www.youtube.com/watch?v=b2iWK08pCgs
  4 [React]  componentes usando props
  5 [React]  componentes com eventos 
  6 [React]  componentes com estados
+  
+   Nota:. No react a mudança de estado de uma váriavel acontece de forma unidirecional. 
+   Ou seja para alterares o valor de uma componente , precisas mudar o estado interno da váriavel do componente
+          
+
  7 [React]  comunicação entre componentes (direita)
  8 [React]  comunicação entre componentes (indireita)
  9 [React]  renderização condicional 

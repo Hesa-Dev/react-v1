@@ -25,7 +25,7 @@ export default function ImagemAleatoria() {
              px-4 py-2 rounded-md
             `} onClick={() => {
 
-                    alterarPesquisa (valor)
+                    alterarPesquisa(valor)
                     console.log(urlImagem())
                 }}>
                 {valor}
@@ -36,13 +36,35 @@ export default function ImagemAleatoria() {
     return (
 
         <div className={`flex flex-col gap-3 border border-zinc-500 p-7 rounded-md`}>
-       
-       <Image src={urlImagem()}  height={300} width={300} alt="Imagem"/>
 
+
+<div className="flex gap-5 mt-2 justify-center">
+    <span>{pesquisa}</span>
+    <span>{tamanho}x{tamanho} </span>
+</div>
+            {/* <Image src={urlImagem()} height={300} width={300} alt="Imagem" /> */}
+            <Image src= {`${url}${tamanho} x${tamanho}?${pesquisa}`} height={300} width={300} alt="Imagem" />
+
+            {/* botões */}
             <div className={` flex  gap-5 justify-between `}>
                 {renderizarBotao('abastract')}
                 {renderizarBotao('city')}
                 {renderizarBotao('person')}
+            </div>
+
+            {/* input tamanho */}
+            <div>
+                <input 
+                type="number"
+                 value={tamanho} 
+                 className='bg-zinc-300 p-2 rounded-md outline-none' 
+                 onChange={e=>{
+
+                    // console.log(e.target.value)
+                    // + -> conversão para tipo number 
+                    alterarTamanho(+e.target.value)
+                 }}
+                 />
             </div>
 
         </div>
