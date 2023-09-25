@@ -1,3 +1,7 @@
+
+
+/* importar seu ficheiro css personalizado */
+@import url(componentes.css);
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
