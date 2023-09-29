@@ -8,13 +8,16 @@ import { IconChevronUp } from "@tabler/icons-react"
 
 interface PerguntaProps {
 
+    indice : number 
     texto: string
     resposta: string
+    aberta:boolean
+    alternarVisibilidade:(indice:number) =>void
 }
 
 export default function Pergunta(props: PerguntaProps) {
 
-    const [aberta, setAberta] = useState<boolean>(false)
+    // const [aberta, setAberta] = useState<boolean>(false)
     // const temp =  <h1> olha o teste</h1>
 
     return (
@@ -29,23 +32,23 @@ export default function Pergunta(props: PerguntaProps) {
             {/* caixa de pergunta  */}
             <div
                 className="bg-zinc-500 p-5 cursor-pointer select-none flex justify-between"
-                onClick={() => setAberta(!aberta)}
+                onClick={() => props.alternarVisibilidade(props.indice)}
+                // nClick={() => setAberta(!props.aberta)}
             >
                 <span>
                     {props.texto}
                 </span>
-                {aberta ? <IconChevronDown /> : <IconChevronUp /> }
+
+                 {props.aberta ? <IconChevronDown /> : <IconChevronUp /> }
+                {/* {aberta ? <IconChevronDown /> : <IconChevronUp /> } */}
 
             </div>
 
             {/*  caixa de resposta  */}
-            <If test={aberta}>
-
-                {aberta && (
-                    <div className="p-5">
-                        {props.resposta}
-                    </div>
-                )}
+            <If test={props.aberta}>
+                {/* {props.aberta && ( */}
+                    <div className="p-5">{props.resposta} </div>
+                {/* )} */}
             </If>
 
 
