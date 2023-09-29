@@ -1,6 +1,8 @@
 import { useState } from "react"
 import If from "./If"
-import { IconBase } from "react-icons"
+import { IconChevronDown } from "@tabler/icons-react"
+import { IconChevronUp } from "@tabler/icons-react"
+
 
 
 
@@ -26,16 +28,13 @@ export default function Pergunta(props: PerguntaProps) {
 
             {/* caixa de pergunta  */}
             <div
-                className="bg-zinc-500 p-5 cursor-pointer select-none"
+                className="bg-zinc-500 p-5 cursor-pointer select-none flex justify-between"
                 onClick={() => setAberta(!aberta)}
             >
                 <span>
                     {props.texto}
-
                 </span>
-
-                <IconBase />
-
+                {aberta ? <IconChevronDown /> : <IconChevronUp /> }
 
             </div>
 

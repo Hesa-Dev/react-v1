@@ -11,6 +11,7 @@ export default function Faq() {
             <Pergunta texto="Será Possível Andar de Canoa" resposta=" efault model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy." />
             <Pergunta texto="Posso ter 3 Dados Movéis" resposta="here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going t" />
 
+ 
         </div>
     )
 }
