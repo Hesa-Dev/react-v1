@@ -8,6 +8,7 @@ import { IconShoppingCart } from "@tabler/icons-react"
 interface ProdutoItemProps {
 
     produto: Produto
+    comprar:(Produto:Produto) => void
 }
 
 export default function ProdutoItem(props: ProdutoItemProps) {
@@ -54,7 +55,7 @@ export default function ProdutoItem(props: ProdutoItemProps) {
                 </div>
                 {/* botão para comprar  */}
                 <div >
-                    <button className="botao flex w-full gap-2  justify-center">
+                    <button className="botao flex w-full gap-2  justify-center" onClick={()=>props.comprar(produto)}>
                         <IconShoppingCart /> Comprar 
                     </button>
                 </div>
