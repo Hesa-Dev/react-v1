@@ -1,5 +1,7 @@
 import Produto from "@/model/Produto"
 import Image from "next/image"
+import { IconShoppingCart } from "@tabler/icons-react"
+
 
 
 
@@ -21,8 +23,10 @@ export default function ProdutoItem(props: ProdutoItemProps) {
              p-1
          `}
         >
+            {/* imagem do produto */}
             <Image
-                src={props.produto.image}
+                // src={props.produto.image}
+                src={produto.image}
                 width={300}
                 height={300}
                 alt="image Produto"
@@ -30,15 +34,32 @@ export default function ProdutoItem(props: ProdutoItemProps) {
             />
 
             {/* info produto  */}
-            <div className={`
-            flex flex-col p-3
-            
-            `}>
+            <div className="flex flex-col p-3 gap-3" >
 
-                <div className="text-xl">
-                    {produto.nome}
+                {/*  nome do produto | Preco do produto */}
+                <div className="flex justify-between items-center">
+                    <div className="text-2xl font-black">
+                        {produto.nome}
+                    </div>
+
+                    {/*  preco do produto  */}
+                    <div className="text-2xl text-green-600 font-black">
+                        $  {produto.preco}
+                    </div>
+                </div>
+
+                {/* descricao do produto  */}
+                <div className="text-xl  ">
+                    {produto.descricao}
+                </div>
+                {/* botão para comprar  */}
+                <div >
+                    <button className="botao flex w-full gap-2  justify-center">
+                        <IconShoppingCart /> Comprar 
+                    </button>
                 </div>
             </div>
+            {/* info produto END  */}
 
         </div>
 
