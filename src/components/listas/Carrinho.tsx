@@ -17,7 +17,7 @@ export default function Carrinho(props: CarrinhoProps) {
     }, 0)
     return (
 
-        <div className="flex flex-col w-full border border-blue-900 rounded-md ">
+        <div className="flex flex-col border border-blue-900 rounded-md ">
 
             <div className="flex justify-between items-center bg-zinc-500 text-3xl  p-3 text-white font-bold ">
                 <span> Carrinho</span>
