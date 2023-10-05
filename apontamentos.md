@@ -80,7 +80,13 @@ https://www.youtube.com/watch?v=b2iWK08pCgs
  7 [React]  comunicação entre componentes (direita)
  8 [React]  comunicação entre componentes (indireita)
  9 [React]  renderização condicional 
- 8 [React]  renderização de lista  
+ 10 [React]  renderização de lista  
+
+  12 [React]  componentes de layout com grid
+  13 [React]  hook personalizados de layout com grid  
+  14 [React]  chamar api https://swapi.dev/  
+      
+
 
 
 
