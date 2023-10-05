@@ -1,77 +1,34 @@
-import useProcessando from "@/data/hooks/useProcessando"
-import { useState } from "react"
 
+import useStarWars from "@/data/hooks/useStarWars"
 export default function Personagens() {
 
-    const { processando, iniciarProcessamento, finalizarProcessamento } = useProcessando()
-    const [personagens, setPersonagens] = useState<any>([])
-
-    async function simularChamadaAPI() {
-
-        // Chamando API 
-        const resp = await fetch('https://swapi.dev/api/people')
-        // OBTER DADOS DA API E CONVERTER EM JSON 
-        const dados = await resp.json()
-        // console.log(dados)
-        // console.log(dados.results) // dados.result devolve total de arrays
-        // console.log(dados.next) // dados.next devolve a url da api 
-        setPersonagens(dados.result)
-
-        // return new Promise(resolve => {
-
-        //     setTimeout(() => {
-        //         resolve(1)
-        //     }, 6000)
-
-        // })
-        // const data = Date.now()
-        // while (Date.now() < data + 6000) { }
-    }
-
-
-    async function ObterPersonagens() {
-
-
-        try {
-
-            iniciarProcessamento()
-            // setProcessando(true)
-            await simularChamadaAPI()
-
-        } finally {
-
-            // setProcessando(false)
-            finalizarProcessamento()
-        }
-
-    }
+    // hook personalizado 
+    const { processando, personagens, ObterPersonagens } = useStarWars()
 
     function renderizarPersonagens() {
 
-        return(
+        return (
 
             <ul>
-            {personagens.map((p: any) =>
+                {personagens.map((p: any) => (
 
-                <li key={p.name}>{p.name}</li>
-            )}
-        </ul>
+                    <li key={p.name}>{p.name}</li>
+                ))}
+            </ul>
         )
-      
-
     }
     return (
 
-        <div>
+        <div className=" flex flex-col justify-center items-center ">
 
             {processando ? (
                 <div>Processando ...</div>
-            ) : personagens.length>0 ? (
+            ) : personagens?.length > 0 ? (
 
                 renderizarPersonagens()
             ) : (
 
-                <div>Nenhum personagens Encontrado</div>
+                <div className="text-white text-xl font-bold">Nenhum personagens Encontrado</div>
             )}
 
 

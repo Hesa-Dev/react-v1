@@ -4,7 +4,7 @@ const nextConfig = {
   images:{
 
     /* fonte de imagen */
-    domains:['source.unsplash.com']
+    domains:['source.unsplash.com' ,'wallpaperaccess.com']
   }
 }
 

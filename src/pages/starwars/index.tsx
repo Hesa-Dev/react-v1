@@ -1,3 +1,4 @@
+import Background from "@/components/starwars/Background";
 import Personagens from "@/components/starwars/Personagens";
 
 export default function PaginaStarwars() {
@@ -19,6 +20,7 @@ export default function PaginaStarwars() {
 
         <div className="flex justify-center items-center h-screen">
 
+            <Background />
             <Personagens />
         </div>
     )
