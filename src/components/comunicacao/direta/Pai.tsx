@@ -9,6 +9,7 @@ interface PaiProps {
 export default function Pai(props: PaiProps) {
 
 
+    
     return (
 
         <div className={` 

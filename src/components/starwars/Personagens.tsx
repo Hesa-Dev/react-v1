@@ -1,38 +1,46 @@
 
 import useStarWars from "@/data/hooks/useStarWars"
-export default function Personagens() {
+
+interface PersonagensProps {
+
+    personagens: any[]
+}
+export default function Personagens(props: PersonagensProps) {
 
     // hook personalizado 
-    const { processando, personagens, ObterPersonagens } = useStarWars()
+    // const { processando, personagens, ObterPersonagens } = useStarWars()
 
-    function renderizarPersonagens() {
-
-        return (
-
-            <ul>
-                {personagens.map((p: any) => (
-
-                    <li key={p.name}>{p.name}</li>
-                ))}
-            </ul>
-        )
-    }
     return (
 
-        <div className=" flex flex-col justify-center items-center ">
+        <div className=" flex flex-col justify-center items-center">
 
-            {processando ? (
-                <div>Processando ...</div>
-            ) : personagens?.length > 0 ? (
+            <table className="w-3/5 text-xl">
 
-                renderizarPersonagens()
-            ) : (
+                <thead>
+                    <tr className="bg-zinc-900 ">
+                        <th className="p-2 font-black">Nome</th>
+                        <th className="p-2 font-black">Altura</th>
+                        <th className="p-2 font-black">Peso</th>
+                        <th className="p-2 font-black">Acões</th>
+                    </tr>
+                </thead>
 
-                <div className="text-white text-xl font-bold">Nenhum personagens Encontrado</div>
-            )}
+                <tbody>
+                    {props.personagens.map((p: any, indice: number) => (
+                        <tr key={p.name}
+                            className={`
+                            text-center 
+                            ${indice % 2 === 0 ? 'bg-zinc-700' : 'bg-zinc-800'}
+                            `}>
+                            <td className="p-2">{p.name}</td>
+                            <td className="p-2" >{p.height}</td>
+                            <td className="p-2">{p.mass}</td>
+                        </tr>
+                    )
 
-
-            <button onClick={ObterPersonagens} className="bg-blue-500 p-2 text-white" >Obter</button>
+                    )}
+                </tbody>
+            </table>
         </div>
     )
 }

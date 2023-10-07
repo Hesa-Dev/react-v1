@@ -6,7 +6,6 @@ interface AvoProps {
     sobrenome: string;
 }
 
-
 export default function Avo(props: AvoProps) {
 
     return (
