@@ -1,9 +1,11 @@
 
 import useStarWars from "@/data/hooks/useStarWars"
+import { IconCheck } from "@tabler/icons-react"
 
 interface PersonagensProps {
 
     personagens: any[]
+    selecionar: (personagem: any) => void
 }
 export default function Personagens(props: PersonagensProps) {
 
@@ -12,7 +14,7 @@ export default function Personagens(props: PersonagensProps) {
 
     return (
 
-        <div className=" flex flex-col justify-center items-center">
+        // <div className=" flex flex-col justify-center items-center">
 
             <table className="w-3/5 text-xl">
 
@@ -35,12 +37,17 @@ export default function Personagens(props: PersonagensProps) {
                             <td className="p-2">{p.name}</td>
                             <td className="p-2" >{p.height}</td>
                             <td className="p-2">{p.mass}</td>
+                            <td className="p-2">
+                                <button className="botao" onClick={() => props.selecionar(p)}>
+                                <IconCheck size={20} />
+                            </button>
+                            </td>
                         </tr>
                     )
 
                     )}
                 </tbody>
             </table>
-        </div>
+        //</div> */}
     )
 }

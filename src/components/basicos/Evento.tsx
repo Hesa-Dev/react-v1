@@ -4,7 +4,7 @@ export default function Evento(){
 
     function incrementar(){
 
-        console.log(contador++)
+        // console.log(contador++)
     }
 
 return (

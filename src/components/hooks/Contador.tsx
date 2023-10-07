@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react"
 
 export default function Contador() {
 
-    console.log("Nova renderização ...!")
+    // console.log("Nova renderização ...!")
 
 
     function setValue(value: number, operation: string) {

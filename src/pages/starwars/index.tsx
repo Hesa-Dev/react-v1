@@ -1,12 +1,18 @@
 import Background from "@/components/starwars/Background";
+import Filmes from "@/components/starwars/Filmes";
 import Personagens from "@/components/starwars/Personagens";
 import useStarWars from "@/data/hooks/useStarWars";
 
 export default function PaginaStarwars() {
 
 
-    const { processando, personagens } = useStarWars()
-    // async function simularChamadaAPI() {
+    const { processando, personagens, filmes, voltar, selecionarPersonagem } = useStarWars()
+
+    //  function selecionarPersonagem(personagem: any){
+
+    //     console.log('selecionado: ' + personagem.name)
+    //  }
+    // // async function simularChamadaAPI() {
 
     //     return new Promise(resolve => {
 
@@ -26,8 +32,13 @@ export default function PaginaStarwars() {
 
             {processando ? (
                 <div>Processando ...</div>
+
+            ) : filmes.length > 0 ? (
+
+                <Filmes filmes={filmes}  voltar={voltar}/>
+
             ) : personagens.length > 0 ? (
-                <Personagens personagens={personagens} />
+                <Personagens personagens={personagens} selecionar={selecionarPersonagem} />
 
             ) : (
 
