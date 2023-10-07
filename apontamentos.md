@@ -109,5 +109,8 @@ https://www.youtube.com/watch?v=b2iWK08pCgs
         para diferencia-lôs dos ficheiros das páginas 
 
 
+NOTA:. Todas ficheiros(imagens,docs, videos etc...) que desejamos adicionar ao projecto e que não estejam armazenados localmente, atravéz do ficheiro next.config.js devemos adicionar o domínio/dns onde esta esta alocado o ficheiro. Para que tenhamos acesso ao ficheiro
+
+
      
 
