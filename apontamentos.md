@@ -87,7 +87,11 @@ https://www.youtube.com/watch?v=b2iWK08pCgs
   https://www.youtube.com/watch?v=TE4hnVlQbL4
   12 [React]  componentes de layout com grid #ep.4 
   13 [React]  hook personalizados de layout com grid  #ep.4
-  14 [React]  chamar api https://swapi.dev/  #ep.4
+  14 [React]  chamar api https://swapi.dev/  #ep.5
+
+  15 [React]  hook... useEffect useCallback useState #EP6
+
+  16 [React]  useContext e Context API  #7 
       
 
 

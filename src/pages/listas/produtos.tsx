@@ -2,32 +2,17 @@ import Carrinho from "@/components/listas/Carrinho"
 import ListaProdutos from "@/components/listas/ListaProdutos"
 // import ProdutoItem from "@/components/listas/ProdutoItem"
 import { produtos } from "@/constants/produtos"
-import ItemCarrinho from "@/model/ItemCarrinho"
-import Produto from "@/model/Produto"
-import {useState} from 'react'
+import CarrinhoContexto from "@/data/contexts/CarrinhoContexto"
+import Link from "next/link"
+import { useContext} from 'react'
 
 
 export default function PaginaProdutos() {
 
-    const produto = produtos[0]
+    // const ctx = useContext(CarrinhoContexto)
+    const {itens,adicionarProduto} = useContext(CarrinhoContexto)
 
-    const [itens, setItens]  = useState<ItemCarrinho[]>([])
-
-    function adicionarProduto(produto: Produto){
-
-
-        // console.log(produto) 
-        // ... -> pega a ultima váriavel da linha de cima ex:. 
-
-        // const a =3 
-        // const b =4 
-        // const soma = (...b + a )
-
-        const itemAtual = itens.find((itens)=>itens.produto.id==produto.id) ?? {quantidade:0,produto}
-        const novoItem = {...itemAtual , quantidade : itemAtual.quantidade +1}
-        const outrosItens = itens.filter((itens) => itens.produto)
-        setItens([...outrosItens,novoItem])
-    }
+    
     return (
 
         <div className={`
@@ -35,8 +20,9 @@ export default function PaginaProdutos() {
             flex-col gap-10
         `}>
             {/* <ProdutoItem produto={produto} />  */}
-<Carrinho  itens={itens} />
+            <Carrinho itens={itens} />
             <ListaProdutos produtos={produtos} comprar={adicionarProduto} />
+            <Link href="/" className="text-black font-bold" >Voltar</Link>
         </div>
 
     )
